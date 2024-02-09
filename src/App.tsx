@@ -38,7 +38,7 @@ function App() {
           </div>
 
           <img
-            src={testImageP}
+            src="./assets/ZGhertner_PW_1120_1164-09_v2.jpg"
             alt="Photo by David Pisnoy on Unsplash"
             crossOrigin="anonymous"
             data-sampler="planeTexture"
