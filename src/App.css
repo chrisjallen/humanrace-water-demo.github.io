@@ -1,14 +1,13 @@
-html,
-body {
-  min-height: 100%;
-}
-
 body {
   margin: 0;
   font-size: 18px;
   font-family: "Rakkas", Verdana, sans-serif;
   background: #ffffff;
   line-height: 1.4;
+}
+
+#root {
+  height: 100%;
 }
 
 header {
@@ -77,6 +76,25 @@ header {
 
   @media (min-width: 800px) {
   }
+}
+
+.auth {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: whitesmoke;
+  display: flex;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+form {
+  display: block;
+}
+form > label {
+  margin-right: 10px;
 }
 
 #canvas {
