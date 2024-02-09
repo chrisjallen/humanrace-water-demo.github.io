@@ -39,7 +39,7 @@ header {
 .collab:after {
   content: "";
   height: 20px;
-  border-left: 2px solid #fff;
+  border-left: 1px solid #fff;
   position: absolute;
   transform: rotate(45deg);
   left: 10px;
@@ -48,7 +48,7 @@ header {
 .collab:before {
   content: "";
   height: 20px;
-  border-left: 2px solid #fff;
+  border-left: 1px solid #fff;
   position: absolute;
   transform: rotate(-45deg);
   left: 10px;
