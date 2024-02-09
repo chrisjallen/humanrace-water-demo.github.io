@@ -7,6 +7,7 @@ varying vec2 vPlaneTextureCoord;
 
 uniform sampler2D uRippleTexture;
 uniform sampler2D planeTexture;
+uniform sampler2D logoTexture;
 uniform sampler2D titleTexture;
 
 uniform vec2 uResolution;
@@ -110,7 +111,7 @@ vec4 renderPass(vec2 uv, inout float distortion) {
 
 void main() {
     vec4 color = vec4(1.0);
-    
+
     float distortion;
     vec4 reflections = renderPass(vTextureCoord, distortion);            
     
@@ -121,16 +122,16 @@ void main() {
     
     vec2 textureCoords = vTextureCoord + distortion * (uDisplacementStrength / 250.0);
     vec2 planeTextureCoords = vPlaneTextureCoord + distortion * (uDisplacementStrength / 250.0);
-    
+
     vec4 texture = texture2D(planeTexture, planeTextureCoords);
     vec4 title = texture2D(titleTexture, textureCoords);
+    // vec4 logo = texture2D(logoTexture, textureCoords);
     title.rgb *= vec3(uTitleColor.r / 255.0, uTitleColor.g / 255.0, uTitleColor.b / 255.0);
-    
+
     // mix texture and title
     color = mix(vec4(0.05, 0.05, 0.05, 1.0), texture, uShowTexture);
-    color = mix(color, title, title.a);
+    // color = mix(color, title, title.a);
 
-    
     // add fake lights & shadows
     float lights = max(0.0, ripples.r - 0.5);
     color.rgb += lights * (uLightIntensity / 10.0);
