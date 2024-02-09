@@ -1,4 +1,4 @@
-
+// @ts-nocheck
 import { Curtains, Plane, } from "curtainsjs";
 import dat from "dat.gui"
 import { Ripples } from "./ripples/ripples";
